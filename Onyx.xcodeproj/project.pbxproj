@@ -11,6 +11,10 @@
 		4C7B04362B20D551001621C8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7B04352B20D551001621C8 /* ContentView.swift */; };
 		4C7B04382B20D554001621C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C7B04372B20D554001621C8 /* Assets.xcassets */; };
 		4C7B043C2B20D554001621C8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C7B043B2B20D554001621C8 /* Preview Assets.xcassets */; };
+		4C7B04442B20D72E001621C8 /* SiriWaveView in Frameworks */ = {isa = PBXBuildFile; productRef = 4C7B04432B20D72E001621C8 /* SiriWaveView */; };
+		4C7B04472B20D741001621C8 /* XCAOpenAIClient in Frameworks */ = {isa = PBXBuildFile; productRef = 4C7B04462B20D741001621C8 /* XCAOpenAIClient */; };
+		4C7B04492B20D8DF001621C8 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7B04482B20D8DF001621C8 /* Models.swift */; };
+		4C7B044B2B20D965001621C8 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7B044A2B20D965001621C8 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,8 @@
 		4C7B04372B20D554001621C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C7B04392B20D554001621C8 /* Onyx.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Onyx.entitlements; sourceTree = "<group>"; };
 		4C7B043B2B20D554001621C8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4C7B04482B20D8DF001621C8 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		4C7B044A2B20D965001621C8 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +33,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C7B04472B20D741001621C8 /* XCAOpenAIClient in Frameworks */,
+				4C7B04442B20D72E001621C8 /* SiriWaveView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				4C7B04332B20D551001621C8 /* OnyxApp.swift */,
+				4C7B04482B20D8DF001621C8 /* Models.swift */,
+				4C7B044A2B20D965001621C8 /* ViewModel.swift */,
 				4C7B04352B20D551001621C8 /* ContentView.swift */,
 				4C7B04372B20D554001621C8 /* Assets.xcassets */,
 				4C7B04392B20D554001621C8 /* Onyx.entitlements */,
@@ -85,6 +95,10 @@
 			dependencies = (
 			);
 			name = Onyx;
+			packageProductDependencies = (
+				4C7B04432B20D72E001621C8 /* SiriWaveView */,
+				4C7B04462B20D741001621C8 /* XCAOpenAIClient */,
+			);
 			productName = Onyx;
 			productReference = 4C7B04302B20D551001621C8 /* Onyx.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +127,10 @@
 				Base,
 			);
 			mainGroup = 4C7B04272B20D551001621C8;
+			packageReferences = (
+				4C7B04422B20D72E001621C8 /* XCRemoteSwiftPackageReference "SiriWaveView" */,
+				4C7B04452B20D741001621C8 /* XCRemoteSwiftPackageReference "XCAOpenAIClient" */,
+			);
 			productRefGroup = 4C7B04312B20D551001621C8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,7 +157,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C7B04492B20D8DF001621C8 /* Models.swift in Sources */,
 				4C7B04362B20D551001621C8 /* ContentView.swift in Sources */,
+				4C7B044B2B20D965001621C8 /* ViewModel.swift in Sources */,
 				4C7B04342B20D551001621C8 /* OnyxApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +294,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Talk with AI Assistant";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -282,8 +303,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -312,6 +333,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Talk with AI Assistant";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -320,8 +342,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -359,6 +381,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4C7B04422B20D72E001621C8 /* XCRemoteSwiftPackageReference "SiriWaveView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alfianlosari/SiriWaveView";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		4C7B04452B20D741001621C8 /* XCRemoteSwiftPackageReference "XCAOpenAIClient" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alfianlosari/XCAOpenAIClient";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4C7B04432B20D72E001621C8 /* SiriWaveView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4C7B04422B20D72E001621C8 /* XCRemoteSwiftPackageReference "SiriWaveView" */;
+			productName = SiriWaveView;
+		};
+		4C7B04462B20D741001621C8 /* XCAOpenAIClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4C7B04452B20D741001621C8 /* XCRemoteSwiftPackageReference "XCAOpenAIClient" */;
+			productName = XCAOpenAIClient;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4C7B04282B20D551001621C8 /* Project object */;
 }
