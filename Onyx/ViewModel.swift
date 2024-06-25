@@ -13,7 +13,7 @@ import XCAOpenAIClient
 @Observable
 class ViewModel: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
     
-    let client = OpenAIClient(apiKey: "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")
+    let client = OpenAIClient(apiKey: "OPENAI_API_KEY GOES HERE")
     var audioPlayer: AVAudioPlayer!
     var audioRecorder: AVAudioRecorder!
     #if !os(macOS)
